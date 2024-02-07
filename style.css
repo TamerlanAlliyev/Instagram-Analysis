@@ -301,7 +301,7 @@
     }
 
     main {
-      top: -50px;
+      /* top: -50px; */
       width: 100%;
       display: flex;
       justify-content: center;
@@ -311,7 +311,7 @@
 
     main .head {
       margin-top: 5%;
-      width: 35%;
+      width: 85%;
       padding: 3%;
       border-radius: 25px;
       border: 1.5px solid #ffffff;
