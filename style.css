@@ -36,7 +36,7 @@
 
   }
 
-  header img {
+  header .bg-img img {
     max-width: 300px;
     width: 300px;
     position: absolute;
@@ -46,13 +46,23 @@
     cursor: pointer;
   }
 
+  header .category img {
+    display: none;
+  }
+
 
   header nav {
     display: flex;
     justify-content: end;
   }
 
-  nav ul {
+  /* nav ul {
+    list-style: none;
+    gap: 50px;
+    display: flex;
+  } */
+  header .category ul{
+    display: flex;
     list-style: none;
     gap: 50px;
     display: flex;
@@ -262,7 +272,9 @@
       position: relative; */
     }
 
-    header img {
+    
+
+    header .bg-img img {
       max-width: 300px;
       width: 150px;
       /* position: absolute;
@@ -271,6 +283,26 @@
       transform: translate(-50%, -50%);
       cursor: pointer; */
     }
+  
+    header .category img {
+      display: block;
+      width: 25px;
+    }
+
+    header .category ul{
+      left: 0;
+      top: 0;
+      position: absolute;
+      width: 80%;
+      height: 100vh;
+      background: #ffffff;
+      z-index: 10;
+      display: flex;
+      padding: 20%;
+      flex-direction: column;
+      display: none;
+    }
+
 
 
     header nav {
@@ -285,13 +317,21 @@
     }
 
     nav ul li a {
-      /* text-decoration: none;
-      color: white; */
-      font-size: 12px;
+      /* text-decoration: none;*/
+      color: rgb(0, 0, 0); 
+      font-size: 20px;
       /* font-weight: 600;
       transition: 0.5s;
       cursor: pointer; */
     }
+
+
+
+
+
+
+
+
 
     main .info {
       color: white;
@@ -321,6 +361,7 @@
       display: flex;
       justify-content: space-around;
       gap: 10%;
+      z-index: -1;
     }
 
     main .head .lab img {
@@ -343,6 +384,7 @@
       height: 0;
       overflow: hidden;
       visibility: hidden;
+      z-index: -1;
     }
 
 
@@ -384,6 +426,8 @@
       backdrop-filter: blur(25px);
       cursor: pointer;
       transition: transform 0.2s;
+            z-index: -1;
+
     }
 
     #btn:hover {
@@ -432,6 +476,8 @@
       text-decoration: none;
       font-size: 12px;
       font-weight: 500;
+      z-index: -1;
+
     }
 
     .powered a:hover {

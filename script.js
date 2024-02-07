@@ -72,3 +72,22 @@ btn.addEventListener('click', () => {
 
 // const basketData = JSON.parse(localStorage.getItem('basket'))
 //  localStorage.setItem('catalogLists', JSON.stringify(catalogserach));
+
+
+const categoryIcon = document.querySelector('.category img');
+const categoryList = document.querySelector('.category ul');
+
+let toogle = false;
+categoryIcon.addEventListener('click', () => {
+
+    if(!toogle){
+        categoryIcon.src="./assets/icons/Close-icon.svg"
+        categoryList.style.display = "flex";
+        toogle = true;
+    }else{
+        categoryIcon.src="./assets/icons/Category.svg"
+        categoryList.style.display = "none";
+        toogle = false;
+    }
+    
+});
