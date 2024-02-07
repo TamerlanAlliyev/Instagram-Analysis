@@ -161,7 +161,7 @@
     color: #fff;
     margin-top: 2%;
     font-weight: 700;
-    padding: 0.5% 1%;
+    padding: 15px 18px;
     border-radius: 50px;
     border: 1px solid #fff;
     background: linear-gradient(40deg, rgba(254, 218, 119, 0.579), rgba(227, 119, 45, 0.20), rgba(200, 44, 130, 0.16), rgba(140, 51, 169, 0.267), rgba(81, 92, 212, 0.398));
@@ -233,15 +233,17 @@
 
 
 
+/* ******************************************************************** */
+
+/*                  961 PX              */
+
+/* ******************************************************************** */
 
 
 
 
 
-
-  @media only screen and (max-width:961px) {
-
-
+  @media only screen and (max-width:961px){
 
 
 
@@ -252,16 +254,15 @@
       background-attachment: fixed;
       background-position: center;
     }
-
-
-    .container {
+  
+    /* .container {
       width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 100vh;
-    }
-
+    } */
+  
     header {
       width: 100%;
       height: 50px;
@@ -271,9 +272,7 @@
       align-items: center;
       position: relative; */
     }
-
-    
-
+  
     header .bg-img img {
       max-width: 300px;
       width: 150px;
@@ -287,61 +286,64 @@
     header .category img {
       display: block;
       width: 25px;
+      /* translate: 1000ms ease; */
+
     }
 
     header .category ul{
       left: 0;
       top: 0;
+
       position: absolute;
-      width: 80%;
-      height: 100vh;
+      width: 50%;
+      height: 100px;
+      align-items: center;
+      justify-content: center;
       background: #ffffff;
       z-index: 10;
       display: flex;
-      padding: 20%;
-      flex-direction: column;
+      border-radius: 50px;
       display: none;
+      left: 50%;
+      top: 250%;
+      transform: translate(-50%, -50%);
     }
-
-
-
+  
     header nav {
       display: flex;
       justify-content: end;
+    }
+  
+    nav ul {
+      list-style: none;
+      gap: 50px;
+      display: flex;
     }
 
     nav ul {
       list-style: none;
       gap: 25px;
-      /* display: flex; */
     }
 
     nav ul li a {
-      /* text-decoration: none;*/
       color: rgb(0, 0, 0); 
-      font-size: 20px;
-      /* font-weight: 600;
-      transition: 0.5s;
-      cursor: pointer; */
+      font-size: 18px;
     }
 
 
+    
+    
+    
 
-
-
-
-
-
+    
 
     main .info {
-      color: white;
-      font-weight: 700;
-      font-size: 12px;
-      margin-bottom: -3%;
+      font-size: 14px;
+      text-align: center;
     }
 
     main {
-      /* top: -50px; */
+      top: -50px;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -361,7 +363,7 @@
       display: flex;
       justify-content: space-around;
       gap: 10%;
-      z-index: -1;
+      /* z-index: -1; */
     }
 
     main .head .lab img {
@@ -384,7 +386,7 @@
       height: 0;
       overflow: hidden;
       visibility: hidden;
-      z-index: -1;
+      /* z-index: -1; */
     }
 
 
@@ -404,30 +406,20 @@
       text-decoration: none;
     }
 
-    /* #btn{
-    color: #fff;
-    margin-top: 2%;
-    padding: 0.5%;
-    border-radius: 10px;
-    border: 1px solid #fff;
-    background:linear-gradient(to right, rgba(254, 218, 119,0.70), rgba(227, 119, 45, 0.20),rgba(200, 44, 130, 0.25), rgba(139, 51, 169, 0.50),rgba(81, 91, 212, 0.75)) ;
-    backdrop-filter: blur(10px);
-} */
+
 
 
     #btn {
       color: #fff;
-      margin-top: 2%;
+      margin-top: 5%;
       font-weight: 700;
-      padding: 0.5% 1%;
+      padding: 15px 18px;
       border-radius: 50px;
       border: 1px solid #fff;
       background: linear-gradient(40deg, rgba(254, 218, 119, 0.579), rgba(227, 119, 45, 0.20), rgba(200, 44, 130, 0.16), rgba(140, 51, 169, 0.267), rgba(81, 92, 212, 0.398));
       backdrop-filter: blur(25px);
       cursor: pointer;
       transition: transform 0.2s;
-            z-index: -1;
-
     }
 
     #btn:hover {
@@ -440,58 +432,95 @@
       transform: scale(0.95);
     }
 
-
-    footer {
-      width: 100%;
-      background: #fdfdfd;
-
-    }
-
     .powered {
-      padding: 0.4%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 25px;
-      color: white;
-      font-size: 18px;
+      padding: 10px;
+      font-size: 15px;
     }
-
+  
     .powered p {
-      font-size: 14px;
-      font-weight: 500;
-      color: #000000;
-    }
-
-    .powered a {
-      color: #000000;
-      padding: 0.3% 0.5%;
-      border-radius: 50px;
-      border: 1px solid #fff;
-      background: #2f09b93e;
-      backdrop-filter: blur(25px);
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-      /* Transform ve box-shadow için 0.2 saniyelik bir geçiş */
-      text-decoration: none;
       font-size: 12px;
-      font-weight: 500;
-      z-index: -1;
-
+  
     }
-
-    .powered a:hover {
-      color: #ffffff;
-      background: linear-gradient(320deg, rgba(254, 218, 119, 0.718), rgba(227, 118, 45, 0.726), rgba(200, 44, 130, 0.792), rgba(140, 51, 169, 0.709), rgba(81, 92, 212, 0.833));
-      box-shadow:
-        0 0 10px 0px rgba(140, 51, 169, 0.709);
+  
+    .powered a {
+      padding: 8px 12px;
+      font-size: 12px;
     }
-
-
-
-
 
 
 
 
   }
+
+
+
+  
+
+
+
+
+
+
+
+
+/* ******************************************************************** */
+
+/*                  961 PX              */
+
+/* ******************************************************************** */
+
+
+
+
+
+@media only screen and (max-width:561px){
+
+
+
+  body {
+    background-image: url(./assets/images/MobileBG.svg);
+  }
+
+  header .category ul{
+    width: 80%;
+    height: 70px;
+  }
+
+  nav ul li a {
+    color: rgb(0, 0, 0); 
+    font-size: 14px;
+  }
+
+  main .head {
+    width: 90%;
+    padding: 2%;
+  }
+
+  main .head .lab img {
+    width: 45%;
+    height: 45%;
+  }
+
+  main .head p {
+    font-size: 17px;
+  }
+
+
+
+  #btn {
+    margin-top: 5%;
+    padding: 12px 15px;
+  }
+
+  #btn:hover {
+    background: linear-gradient(320deg, rgba(254, 218, 119, 0.718), rgba(227, 118, 45, 0.726), rgba(200, 44, 130, 0.792), rgba(140, 51, 169, 0.709), rgba(81, 92, 212, 0.833));
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.735);
+  }
+
+  #btn:active {
+    box-shadow: 0 0 30px 0px rgba(255, 255, 255, 0.735);
+    transform: scale(0.95);
+  }
+
+
+}
