@@ -1,0 +1,43 @@
+const input = document.querySelectorAll('input');
+const btn = document.getElementById('btn');
+
+let youFollowedFile;
+let followersFile;
+
+const file1Container = document.getElementById('file1');
+const file2Container = document.getElementById('file2');
+
+input.forEach(input => {
+    input.addEventListener('change', () => {
+        const file1 = input.files[0];
+        const reader1 = new FileReader();
+
+        const file2 = input.files[1];
+        const reader2 = new FileReader();
+
+        reader1.onload = function() {
+            youFollowedFile = reader1.result;
+            file1Container.innerHTML =  reader1.result;
+        };
+
+        reader2.onload = function() {
+            followersFile = reader2.result;
+            file2Container.innerHTML =  reader2.result;
+        };
+
+        reader1.readAsText(file1);
+        reader2.readAsText(file2);
+    });
+});
+
+btn.addEventListener('click', () => {
+    const f1 = document.querySelectorAll('#file1 ._a6-p a');
+    const f2 = document.querySelectorAll('#file2 ._a6-p a');
+
+    f1.forEach((item1, index) => {
+        const item2 = f2[index];
+        if (item1.textContent != item2.textContent) {
+            console.log("Farklı içerikler:", item1.textContent, item2.textContent);
+        }
+    });
+});

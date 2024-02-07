@@ -1,0 +1,115 @@
+const input = document.querySelectorAll('input');
+const output = document.querySelector('p');
+
+const youFollowed = document.getElementById('youFollowed');
+const followers = document.getElementById('followers');
+const btn = document.getElementById('btn');
+let youFollowedFile;
+let followersFile;
+
+
+const filed1 = document.querySelector('.file1');
+const filed2 = document.querySelector('.file2');
+
+input.forEach(input => {
+input.addEventListener('change', () => {
+    const file1 = input.files[0];
+    const reader1 = new FileReader();
+
+    const file2 = input.files[1]; 
+    const reader2 = new FileReader();
+
+    reader1.onload = function() {
+        youFollowedFile = reader1.result;
+        filed1.innerHTML =  reader1.result;
+        // output.textContent = youFollowedFile; 
+        // console.log(youFollowedFile); 
+    };
+
+    reader2.onload = function() {
+        followersFile = reader2.result;
+        filed2.innerHTML =  reader2.result;
+        // output.textContent = followersFile; 
+        // console.log(followersFile); 
+        console.log(filed2);
+    };
+
+    reader1.readAsText(file1);
+    reader2.readAsText(file2);
+
+
+
+
+
+
+
+
+
+});
+});
+
+
+
+
+const f1 = document.querySelectorAll('.file1 ._a6-p a');
+const f2 = document.querySelectorAll('.file2 ._a6-p a');
+
+btn.addEventListener('click', () => {
+    console.log(`aa`);
+    f1.forEach((item1, index) => {
+        const item2 = f2[index]; // f2'deki aynı konumda olan elemanı al
+        if (item1.textContent == item2.textContent) {
+            console.log("Farklı içerikler:", item1.textContent, item2.textContent);
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+// btn.addEventListener('click', () => {
+//     followersFile.forEach(followers => {
+
+//         youFollowedFile.forEach(youFollowed => {
+//             if (followers.includes(youFollowed)) {
+//                 console.log("a");
+//             }
+//         });
+//     });
+// });
+
+
+
+// btn.addEventListener('click', () => {
+//     // followersFile ve youFollowedFile içeriğini metin olarak alıp <a> etiketlerinin içeriğini kontrol ediyoruz
+//     followersFile = followersFile.textContent;
+//     youFollowedFile = youFollowedFile.textContent;
+
+//     // <a> etiketlerinin içeriğini alırken regüler ifadeleri (RegExp) kullanarak alıyoruz
+//     const regex = /<a[^>]*>([^<]+)<\/a>/g; // <a> etiketlerini bulmak için regüler ifade
+//     const followersNames = [];
+//     let match;
+//     while ((match = regex.exec(followersFile)) !== null) {
+//         followersNames.push(match[1]); // <a> etiketinin içeriğini followersNames dizisine ekliyoruz
+//     }
+
+//     // <a> etiketlerinin içeriğini alırken regüler ifadeleri (RegExp) kullanarak alıyoruz
+//     const youFollowedNames = [];
+//     while ((match = regex.exec(youFollowedFile)) !== null) {
+//         youFollowedNames.push(match[1]); // <a> etiketinin içeriğini youFollowedNames dizisine ekliyoruz
+//     }
+
+//     // Her takip edilenin takipçileri içinde olup olmadığını kontrol ediyoruz
+//     youFollowedNames.forEach(youFollowed => {
+//         followersNames.forEach(follower => {
+//             if (follower.includes(youFollowed)) {
+//                 console.log(youFollowed + " found in followers.");
+//             }
+//         });
+//     });
+// });
