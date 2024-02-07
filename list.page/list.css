@@ -104,19 +104,18 @@ main {
 }
 
 main .head {
-  display: flex;
+ display: flex;
   flex-direction: column;
-  width: 35%;
+  width: 45%;
   padding: 3%;
   border-radius: 25px;
   border: 1.5px solid #ffffff;
   box-shadow: 0 0 20px 0px rgba(255, 255, 255, 0.735);
   background: linear-gradient(to right, rgba(253, 253, 253, 0.079), rgba(239, 239, 239, 0.4));
   backdrop-filter: blur(1px);
-  display: flex;
-  justify-content: space-around;
-  gap: 4%;
+  gap: 20px;
   max-height: 100%;
+  height: 100%;
 }
 
 
@@ -130,6 +129,11 @@ main .head {
   display: flex;
   justify-content: space-between;
   padding: 0 30px;
+}
+
+.info p{
+  color: white;
+  font-weight: 700;
 }
 
 .arrow {
@@ -152,7 +156,7 @@ main .head {
 
 .list::-webkit-scrollbar-thumb {
   background-color: rgba(175, 5, 110, 0.487);
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 .list::-webkit-scrollbar-track {
@@ -373,106 +377,18 @@ footer {
   }
 
 
-  
-  
-  
-
-  
-
-  main .info {
-    font-size: 14px;
-    text-align: center;
-  }
-
-  main {
-    top: -50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
   main .head {
-    margin-top: 5%;
-    width: 85%;
-    padding: 3%;
-    border-radius: 25px;
-    border: 1.5px solid #ffffff;
-    box-shadow: 0 0 20px 0px rgba(255, 255, 255, 0.735);
-    background: linear-gradient(to right, rgba(253, 253, 253, 0.079), rgba(239, 239, 239, 0.4));
-    backdrop-filter: blur(1px);
-    display: flex;
-    justify-content: space-around;
-    gap: 10%;
-    /* z-index: -1; */
+    width: 90%;
+    height: 100%;
+    padding: 4%;
+    gap: 10px;
   }
-
-  main .head .lab img {
-    width: 50%;
-    height: 50%;
-  }
-
-  main .head .lab {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15%;
-  }
-
-  main .head input {
-    opacity: 0;
-    position: absolute;
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
-    /* z-index: -1; */
-  }
-
-
-  main .head p {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.823);
-    font-size: 18px;
-    font-weight: 600;
-    transition: 0.5s;
-    cursor: pointer;
-  }
-
-  main .head p:hover {
-    color: rgb(241, 179, 255);
-    transition: 0.5s;
-    cursor: pointer;
-    text-decoration: none;
-  }
+  
+  
 
 
 
 
-  #btn {
-    color: #fff;
-    margin-top: 5%;
-    font-weight: 700;
-    padding: 15px 18px;
-    border-radius: 50px;
-    border: 1px solid #fff;
-    background: linear-gradient(40deg, rgba(254, 218, 119, 0.579), rgba(227, 119, 45, 0.20), rgba(200, 44, 130, 0.16), rgba(140, 51, 169, 0.267), rgba(81, 92, 212, 0.398));
-    backdrop-filter: blur(25px);
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-
-  #btn:hover {
-    background: linear-gradient(320deg, rgba(254, 218, 119, 0.718), rgba(227, 118, 45, 0.726), rgba(200, 44, 130, 0.792), rgba(140, 51, 169, 0.709), rgba(81, 92, 212, 0.833));
-    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.735);
-  }
-
-  #btn:active {
-    box-shadow: 0 0 30px 0px rgba(255, 255, 255, 0.735);
-    transform: scale(0.95);
-  }
 
   .powered {
     padding: 10px;
@@ -533,36 +449,45 @@ nav ul li a {
   font-size: 14px;
 }
 
-main .head {
-  width: 90%;
-  padding: 2%;
-}
-
-main .head .lab img {
-  width: 45%;
-  height: 45%;
-}
-
-main .head p {
-  font-size: 17px;
-}
 
 
 
-#btn {
-  margin-top: 5%;
-  padding: 12px 15px;
-}
+  /* ******************* *************************/
 
-#btn:hover {
-  background: linear-gradient(320deg, rgba(254, 218, 119, 0.718), rgba(227, 118, 45, 0.726), rgba(200, 44, 130, 0.792), rgba(140, 51, 169, 0.709), rgba(81, 92, 212, 0.833));
-  box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.735);
-}
-
-#btn:active {
-  box-shadow: 0 0 30px 0px rgba(255, 255, 255, 0.735);
-  transform: scale(0.95);
-}
+ 
+  
+  main .head p{
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .list::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .list img {
+    width: 15px;
+    height: 15px;
+  }
+  
+  .user-info img {
+    width: 34px;
+    height: 34px;
+  }
+  .list li {
+    padding: 12px;
+  }
+  
+  .list a {
+    font-size: 14px;
+  }
+  
 
 
 }
