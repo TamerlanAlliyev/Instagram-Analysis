@@ -275,10 +275,6 @@ footer {
 
 
 
-
-
-
-
 /* ******************************************************************** */
 
 /*                  961 PX              */
@@ -342,7 +338,7 @@ footer {
 
     position: absolute;
     width: 50%;
-    height: 100px;
+    height: 70px;
     align-items: center;
     justify-content: center;
     background: #ffffff;
@@ -353,6 +349,9 @@ footer {
     left: 50%;
     top: 250%;
     transform: translate(-50%, -50%);
+
+
+    
   }
 
   header nav {
