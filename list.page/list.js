@@ -37,7 +37,7 @@ categoryIcon.addEventListener('click', () => {
     if(!toogle){
         categoryIcon.src="../assets/icons/Close-icon.svg"
         categoryList.style.display = "flex";
-        mainHead.style.marginTop = "95px";
+        mainHead.style.marginTop = "125px";
         toogle = true;
     }else{
         categoryIcon.src="../assets/icons/Category.svg"

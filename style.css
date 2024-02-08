@@ -283,7 +283,7 @@
     header .category ul{
       left: 0;
       top: 0;
-
+      height: 70px;
       position: absolute;
       width: 50%;
       height: 100px;
