@@ -267,8 +267,7 @@ footer {
   header .category img {
     display: block;
     width: 25px;
-    /* translate: 1000ms ease; */
-
+    margin: 18px;
   }
 
   header .category ul {
@@ -445,7 +444,7 @@ footer {
 
   header .category ul {
     width: 80%;
-    height: 10%;
+    height: 70px;
   }
 
   nav ul li a {
