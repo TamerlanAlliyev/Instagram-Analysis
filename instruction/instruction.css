@@ -460,7 +460,7 @@ footer {
   
 
   main {
-    margin: 10px 10px;
+    margin: 15px 10px;
   }
   
 /*   
@@ -476,7 +476,7 @@ footer {
   
   
   main .introduction h2 {
-    margin-bottom: 10px;
+    margin: 15px 0 10px;
   }
   
   main .introduction h4 {
