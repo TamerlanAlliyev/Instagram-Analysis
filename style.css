@@ -495,8 +495,9 @@
     font-size: 17px;
   }
 
-
-
+  main .head p {
+    font-size: 14px;
+}
   #btn {
     margin-top: 5%;
     padding: 12px 15px;
