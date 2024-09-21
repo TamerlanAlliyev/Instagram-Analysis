@@ -10,7 +10,7 @@ youFollowed.addEventListener('change', () => {
     const reader = new FileReader();
     reader.onload = function () {
         const data = reader.result;
-        getProduct(data, false); // getProduct çağrısında ikinci bir parametre ekleyerek izleyiciyi belirleyin
+        getProduct(data, false); 
     };
     reader.readAsText(file);
 });
@@ -20,12 +20,12 @@ followers.addEventListener('change', () => {
     const reader = new FileReader();
     reader.onload = function () {
         const data = reader.result;
-        getProduct(data, true); // getProduct çağrısında ikinci bir parametre ekleyerek izleyiciyi belirleyin
+        getProduct(data, true); 
     };
     reader.readAsText(file);
 });
 
-const getProduct = (data, isFollowers) => { // İzleyiciyi belirleyin
+const getProduct = (data, isFollowers) => { 
     try {
         const jsonData = JSON.parse(data);
         if (isFollowers) {
@@ -46,32 +46,14 @@ btn.addEventListener('click', () => {
         alert("Zəhmət olmasa qovluqları doğru şəkildə yenidən yükləyin...");
         return;
     }
-
         const followingValues = youFollowedFile.relationships_following.map(item => item.string_list_data[0].value);
-
         const followersValues = followersFile.map(item => item.string_list_data[0].value);
-
         notFollowedValues = followingValues.filter(value => !followersValues.includes(value));
 
         console.log(notFollowedValues);
         localStorage.setItem('userList', notFollowedValues);
-
-       
-
         window.location.href = './list.page/list.html';
-        // Ekrana yazdır
-
-        // notFollowedValues.forEach(value => {
-        // console.log(`"${value}" following.json dosyasında bulunuyor ancak followers.json dosyasında bulunmuyor.`);
-
-        //     list.innerHTML+=`<li><a target="_blank" href="https://www.instagram.com/${value}/">${value}</a></li>`
-        // });
-
-  
 });
-
-// const basketData = JSON.parse(localStorage.getItem('basket'))
-//  localStorage.setItem('catalogLists', JSON.stringify(catalogserach));
 
 
 const categoryIcon = document.querySelector('.category img');
