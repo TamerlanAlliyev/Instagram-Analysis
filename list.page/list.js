@@ -2,7 +2,6 @@ const userList = localStorage.getItem('userList').split(',');
 const list = document.querySelector('.list ul');
 
 userList.forEach(value => {
-    console.log(`"${value}" following.json dosyasında bulunuyor ancak followers.json dosyasında bulunmuyor.`);
 
     list.innerHTML += `
         <li>
